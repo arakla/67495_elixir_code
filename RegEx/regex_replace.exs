@@ -1,0 +1,7 @@
+Regex.replace(~r/d/, "abc", "d") #"abc"
+Regex.replace(~r/b/, "abc", "d") #"adc"
+Regex.replace(~r/b/, "abc", "[\\0]") #"a[b]c"
+Regex.replace(~r/a(b|d)c/, "abcadc", "[\\1]") #"[b][d]"
+Regex.replace(~r/\.(\d)$/, "500.5", ".\\g{1}0") #"500.50"
+Regex.replace(~r/a(b|d)c/, "abcadc", fn _, x -> "[#{x}]" end) #"[b][d]"
+Regex.replace(~r/a/, "abcadc", "A", global: false) #"Abcadc"
