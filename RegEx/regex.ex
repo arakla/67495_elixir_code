@@ -9,7 +9,7 @@ defmodule RegExp do
     Regex.match?(~r{^eat$}, basic)
   end
   def is_email(email) do
-    Regex.match?(~r/^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$/, email)
+    Regex.match?(~r/^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,6}$/, email)
   end
   def is_email2(email) do
     Regex.match?(~r/^[\w]([^@\s,;]+)@(([\w-]+\.)+[a-z]{2,})$/, email)
